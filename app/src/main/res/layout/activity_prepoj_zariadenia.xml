@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackboard"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".PrepojZariadenia">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+
+        <!-- Bluetooth ikona (on/off) -->
+        <ImageView
+            android:id="@+id/bluetoothIv"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/bluetooth_on" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <!-- Zapne Bluetooth -->
+            <Button
+                android:id="@+id/onBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/zapni"
+                android:textColor="@android:color/white" />
+
+            <!-- Vypne Bluetooth -->
+            <Button
+                android:id="@+id/offBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/onBtn"
+                android:background="@color/colorPrimary"
+                android:text="@string/vypni"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Zviditeľniť zaradenie -->
+    <Button
+        android:id="@+id/discoverableBtn"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/zviditeni_zariadenie"
+        android:textColor="@android:color/white" />
+
+    <!-- Zisti zariadenia v blízkosti -->
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Skenuj zariadenia"
+        android:textColor="@android:color/white" />
+
+    <!-- Ziskame list spárovaných zariadení -->
+    <Button
+        android:id="@+id/pairedBtn"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/sprovane_zariadenia"
+        android:textColor="@android:color/white" />
+
+    <!-- Zobrazí list zariadeni -->
+    <TextView
+        android:id="@+id/pairedTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:text=""
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

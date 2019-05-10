@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Obesenec</string>
+    <string name="prepoj_zariadenia">Prepoj zariadenia</string>
+    <string name="zviditeni_zariadenie">Zviditeľniť zariadenie</string>
+    <string name="vypni">Vypni</string>
+    <string name="zapni">Zapni</string>
+    <string name="sprovane_zariadenia">Spárované zariadenia</string>
+</resources>

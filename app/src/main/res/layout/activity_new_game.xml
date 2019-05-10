@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackboard"
+    android:orientation="vertical"
+    tools:context=".NewGame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <!-- ImageView určený pre vykreslovanie hangmana -->
+        <ImageView
+            android:id="@+id/hangmanPic"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/h0" />
+
+        <!-- TextView určený pre zobrazovanie pismen ktore hráč zadal -->
+        <TextView
+            android:id="@+id/nespravnePismena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!-- TextView určený pre zobrazenie hladaného slova -->
+        <TextView
+            android:id="@+id/TextView_hra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <!-- Editext slúžiaci pre zadavanie písmen na uhadnutie slova -->
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:maxLength="1"
+            android:visibility="gone" />
+
+        <!-- Editext služiaci pre zadanie tajneho slova -->
+        <EditText
+            android:id="@+id/editTextZadaj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:maxLength="8"
+            android:visibility="gone" />
+
+        <!-- Button ktorý po skončení presmeruje hráčov do MainActivity -->
+        <Button
+            android:id="@+id/buttonNewGame"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="koniecHry"
+            android:text="Koniec"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <!-- Button určeny pre odoslanie tipu -->
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="odosliMsgClick"
+            android:text="Odošli"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <!-- Button určený pre potvrdenie zadaneho slova -->
+        <Button
+            android:id="@+id/zadajSlovoBtn"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="zadajSlovo"
+            android:text="Zadaj slovo"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>
